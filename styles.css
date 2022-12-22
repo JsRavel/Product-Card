@@ -1,0 +1,144 @@
+:root{
+    --secondary: hsl(30, 38%, 92%);
+    --primary: hsl(158, 36%, 37%);
+    --primary-darker: hsl(158, 36%, 17%);
+
+
+    --neutral-dark-blue: hsl(212, 21%, 14%);
+    --neutral-grayish-blue: hsl(228, 12%, 48%);
+    --neutral-white: hsl(0, 0%, 100%);
+
+    --font-montserrath: 'Montserrat', sans-serif;
+    --font-frauces:'Fraunces', serif;
+
+    --fw-regular: 500;
+    --fw-bold: 700;
+}
+
+.atributtion{
+    justify-self: center;
+    font-size: 10px;
+    color: black;
+}
+/* resets */
+h1,p{
+    overflow-wrap: break-word;
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body,html{
+    background-color:hsl(30, 38%, 92%) ; 
+    font-size: 14px;
+    height: 100%;
+    font-family: var(--font-montserrath);
+    font-weight: var(--fw-regular);
+    color: var(--neutral-grayish-blue);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+.image{
+    min-width: 100%;
+    background-image: url(images/image-product-mobile.jpg);
+    background-size: cover;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+.main{
+    display: grid;
+    width: auto;
+    border-radius: 0.6rem;
+    background-color: white;
+    overflow: hidden;
+    max-width: 375px;
+}
+.content{
+    padding: 1.5rem;
+    display: grid;
+    gap: 1rem;
+   
+}
+header{
+    display: grid;
+    gap: 0.6rem;
+}
+header p{
+    letter-spacing: 4px;
+    font-size: 0.8rem;
+    font-family: var(--font-montserrath);
+}
+.description{
+    margin-top: 0;
+    line-height: 1.5rem;
+}
+h1{
+    font-family: var(--font-frauces);
+    font-weight: var(--fw-bold);
+    color: var(--neutral-dark-blue);
+    font-size: 2.2em;
+}
+.not-header{
+    display: grid;
+    gap: 1.5rem;
+}
+
+.prices{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+/* new price */
+.green-price{
+    color: var(--primary);
+    font-family: var(--font-frauces);
+    font-size: 2em;
+}
+/* old price */
+.strikethrough{
+    text-decoration: line-through;
+    font-size: 0.9rem;
+}
+button{
+    display: flex;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    color: var(--neutral-white);
+    font-family: var(--font-montserrath);
+    font-weight: var(--fw-bold);
+    font-size: 0.7;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    transition: ease-in-out 0.3s ;
+}
+
+button:where(:hover, :focus){
+    cursor: pointer;
+    background-color: var(--primary-darker);
+}
+
+@media (min-width: 700px ){
+    .main{
+        grid-template-columns: 6fr 6fr;
+        max-width: 600px;
+    }
+    .content{
+        padding: 1.8rem;
+    }
+    img{
+        height: 100%;
+    }
+    
+    header > h1{
+        font-size: 2.4rem;
+    }
+}
